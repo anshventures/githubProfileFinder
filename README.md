@@ -28,7 +28,7 @@ Type a GitHub username into the input field and click the **Search** button — 
 
  📸 Screenshot
 
-![App Screenshot](./screenshot.png) <!-- Rename and update path when adding your image -->
+![App Screenshot](./assets/screenshot.png) <!-- Rename and update path when adding your image -->
 
 ## 👤 Author
 
