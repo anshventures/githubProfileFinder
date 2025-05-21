@@ -56,8 +56,13 @@ getProfileData(username).then((data)=>{
   UserDetails(data);
 }).catch(function(error){
   card.innerHTML = `<p class="text-red-400 text-lg">❌ ${error.message}</p>`;
+<<<<<<< HEAD
 })
 ;
 
 
 });
+=======
+});
+});
+>>>>>>> 8855fc585e63fbddbf71990598f751dbf28894c3
