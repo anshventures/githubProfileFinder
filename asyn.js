@@ -4,7 +4,10 @@ var card = document.querySelector(".card")
 
 function getProfileData(username) {
   return fetch(`https://api.github.com/users/${username}`)
-    .then((raw => raw.json()));
+    .then((raw =>{
+      if(!raw.ok) throw new Error("User Not Found");
+      else return raw.json();
+    } ));
 }
 
 function getProfileRepo(username){
@@ -13,6 +16,7 @@ return fetch(`https://api.github.com/users/${username}/repos`)
 
 }
 function UserDetails(data){
+
  let details =  `<div class="flex items-center space-x-4">
         <img
           src="${data.avatar_url}"
@@ -27,7 +31,7 @@ function UserDetails(data){
 
       <div class="mt-4 space-y-2" >
         <p class="text-gray-300">
-          🧪 <span class="italic">${data.bio}</span>
+          🧪 <span class="italic">GitHub's official mascot. I love Octocats and long walks through version control.</span>
         </p>
         <div class="flex gap-4 mt-4 text-sm text-gray-400">
           <span>📁 <strong class="text-white">${data.public_repos}</strong> </span>
@@ -40,15 +44,17 @@ function UserDetails(data){
       card.innerHTML = details;
 }
 getProfileRepo("async").then((data)=>{
-
+  
 })
 
 
 search.addEventListener("click",function(){
-  let username = githubusername.value;
+  let a = githubusername.value.trim()
+  let username = a;
 getProfileData(username).then((data)=>{
   console.log(data)
   UserDetails(data);
+}).catch(function(error){
+  card.innerHTML = `<p class="text-red-400 text-lg">❌ ${error.message}</p>`;
 });
-
-})
+});
