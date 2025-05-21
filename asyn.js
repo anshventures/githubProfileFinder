@@ -40,7 +40,7 @@ function UserDetails(data){
       card.innerHTML = details;
 }
 getProfileRepo("async").then((data)=>{
-  console.log(data);
+
 })
 
 
