@@ -48,21 +48,15 @@ getProfileRepo("async").then((data)=>{
 })
 
 
-search.addEventListener("click",function(){
-  let a = githubusername.value.trim()
-  let username = a;
-getProfileData(username).then((data)=>{
-  console.log(data)
-  UserDetails(data);
-}).catch(function(error){
-  card.innerHTML = `<p class="text-red-400 text-lg">❌ ${error.message}</p>`;
-<<<<<<< HEAD
-})
-;
+search.addEventListener("click", function () {
+  let username = githubusername.value.trim();
 
-
+  getProfileData(username)
+    .then((data) => {
+      console.log(data);
+      UserDetails(data);
+    })
+    .catch(function (error) {
+      card.innerHTML = `<p class="text-red-400 text-lg">❌ ${error.message}</p>`;
+    });
 });
-=======
-});
-});
->>>>>>> 8855fc585e63fbddbf71990598f751dbf28894c3
