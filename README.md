@@ -26,9 +26,6 @@ Type a GitHub username into the input field and click the **Search** button — 
 2. Click the **Search** button.
 3. Instantly view their profile data retrieved from the GitHub API.
 
- 📸 Screenshot
-
-![App Screenshot](./assets/screenshot.png) <!-- Rename and update path when adding your image -->
 
 ## 👤 Author
 
@@ -36,7 +33,6 @@ Type a GitHub username into the input field and click the **Search** button — 
 
 [GitHub](https://github.com/anshventures) <!-- Replace with your actual username -->
 
----
 
 > This is a beginner-friendly project made to practice API fetching, DOM manipulation, and Tailwind styling.
 
